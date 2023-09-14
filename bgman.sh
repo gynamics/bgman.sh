@@ -44,11 +44,11 @@ function bgman-set-wallpaper() {
              print >"tmp-out" }' ${BGMAN_WM_CONFIG[$BGMAN_WM_SESSION]} 2>/dev/null
       ;;
     "hyprland")
-      awk '{ sub(/set \$wallpaper .*$/, "\$wallpaper = \"'$(realpath $1)'\"");
+      awk '{ sub(/\$wallpaper = .*$/, "\$wallpaper = \"'$(realpath $1)'\"");
              print >"tmp-out" }' ${BGMAN_WM_CONFIG[$BGMAN_WM_SESSION]} 2>/dev/null
       ;;
     "xmonad")
-      awk '{ sub(/wallpaper = "[^"]*"/, "wallpaper = \"'$(realpath $1)'\"");
+      awk '{ sub(/let wallpaper = "[^"]*"/, "let wallpaper = \"'$(realpath $1)'\"");
              print >"tmp-out" }' ${BGMAN_WM_CONFIG[$BGMAN_WM_SESSION]} 2>/dev/null
       ;;
     *)
