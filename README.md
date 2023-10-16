@@ -36,7 +36,7 @@ i3 config path: `$HOME/.config/i3/config`,
 sway config path: `$HOME/.config/sway/config`
 
 ```config
-# the line above will be overwritten
+# the following line will be overwritten
 set $wallpaper "/path/to/your/wallpaper"
 
 # to use it, you can write:
@@ -47,7 +47,7 @@ exec --no-startup-id feh --no-fehbg --bg-center --bg-fill $wallpaper
 xmonad config path: `$HOME/.config/xmonad/xmonad.hs`
 
 ```haskell
--- the line above will be overwritten
+-- the following line will be overwritten
 let wallpaper = "/path/to/your/wallpaper"
 
 -- to use it, you can write:
@@ -58,7 +58,7 @@ spawn $ "feh --no-fehbg --bg-fill \"" ++ wallpaper ++ "\""
 hyprland config path: `$HOME/.config/hypr/hyprland.conf`
 
 ```config
-# the line above will be overwritten
+# the following line will be overwritten
 $wallpaper = "/path/to/your/wallpaper"
 
 # to use it, write:
