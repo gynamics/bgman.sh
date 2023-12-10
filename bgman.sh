@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # preview & set wallpaper using feh or swaybg
 
 
@@ -102,7 +102,7 @@ function bgman() {
       echo "${2} is not a file"
       return
     fi
-    ;; 
+    ;;
   "-ad")
     if [ -d $2 ]; then
       find $(realpath $2) -maxdepth 1 -type f -regex ".*\.png\|.*\.jpg" | tee -a $BGMAN_WALLPAPER_LIST
@@ -113,7 +113,7 @@ function bgman() {
     fi
     ;;
   "-aR")
-    if [ -d $2 ]; then 
+    if [ -d $2 ]; then
       find $(realpath $2) -type f -regex ".*\.png\|.*\.jpg" | tee -a $BGMAN_WALLPAPER_LIST
       shift 2
     else
@@ -224,7 +224,7 @@ function bgman() {
     fi
     ;;
   *)
-    if [ -z ${1} ]; then 
+    if [ -z ${1} ]; then
       echo " no argument provided. -h for help"
     else
       echo "${1}: invalid argument. -h for help"
